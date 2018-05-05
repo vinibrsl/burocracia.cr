@@ -30,6 +30,16 @@ Burocracia::CEP.valid? "80210-130"
 => true
 ```
 
+## Supported burocracias
+
+| Burocracia    | Module name       | Available?  |
+| ------------- |:-----------------:| -----------:|
+| CEP           | Burocracia::CEP   | Yes         |
+| CPF           | Burocracia::CPF   | Upcoming    |
+| CNPJ          | Burocracia::CNPJ  | Upcoming    |
+| RG            | Burocracia::RG    | Upcoming    |
+| Phone Number  | Burocracia::Phone | Upcoming    |
+
 ## Contributing
 
 1. Fork it ( https://github.com/vnbrs/burocracia.cr/fork )
