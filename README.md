@@ -1,6 +1,6 @@
-# burocracia.cr : all Brazilian _burocracia_ validation, formatting and generation solved
+# burocracia.cr : all Brazilian burocracias solved
 
-burocracia.cr is the dependecyless Crystal shard to validate, generate and format Brazilian burocracias such as CPF, CNPJ and CEP.
+> burocracia.cr is the dependecyless Crystal shard to validate, generate and format Brazilian burocracias such as CPF, CNPJ and CEP.
 
 ## Installation
 
