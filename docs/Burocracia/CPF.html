@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta id="repository-name" content="github.com/vnbrs/burocracia.cr">
+  <link href="../css/style.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="../js/doc.js"></script>
+  <title>Burocracia::CPF - github.com/vnbrs/burocracia.cr</title>
+</head>
+<body>
+
+<div id="types-list">
+  <div id="search-box">
+    <input type="search" id="search-input" placeholder="Search...">
+  </div>
+
+  <ul>
+    <li><a href="../index.html">README</a></li>
+  </ul>
+
+  <ul>
+  
+  <li class="parent open current" data-id="github.com/vnbrs/burocracia.cr/Burocracia" data-name="burocracia">
+      <a href="../Burocracia.html">Burocracia</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/vnbrs/burocracia.cr/Burocracia/CEP" data-name="burocracia::cep">
+      <a href="../Burocracia/CEP.html">CEP</a>
+      
+    </li>
+  
+  <li class=" current" data-id="github.com/vnbrs/burocracia.cr/Burocracia/CPF" data-name="burocracia::cpf">
+      <a href="../Burocracia/CPF.html">CPF</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/vnbrs/burocracia.cr/Burocracia/Generator" data-name="burocracia::generator">
+      <a href="../Burocracia/Generator.html">Generator</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/vnbrs/burocracia.cr/Burocracia/Sanitizer" data-name="burocracia::sanitizer">
+      <a href="../Burocracia/Sanitizer.html">Sanitizer</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+</div>
+
+<div id="main-content">
+<h1 class="type-name">
+
+  <span class="kind">module</span> Burocracia::CPF
+
+</h1>
+
+
+
+
+
+  <h2>Overview</h2>
+
+  <p>The CPF module offers methods to validate, generate and format Brazilian CPFs.</p>
+
+
+
+
+
+
+
+  <h2>Extended Modules</h2>
+  <ul class="other-types-list">
+  
+    <li class="other-type"><a href="../Burocracia/CPF.html">Burocracia::CPF</a></li>
+  
+    <li class="other-type"><a href="../Burocracia/Sanitizer.html">Burocracia::Sanitizer</a></li>
+  
+  </ul>
+
+
+
+
+
+
+
+
+  <h2>Defined in:</h2>
+  
+    
+      <a href="https://github.com/vnbrs/burocracia.cr/blob/d79164846a144a90caf64ab8bb70b135d4011d9e/src/burocracia/cpf.cr#L6" target="_blank">burocracia/cpf.cr</a>
+    
+    <br/>
+  
+
+
+
+  
+    <h2>Constant Summary</h2>
+  
+  <dl>
+    
+      <dt class="entry-const" id="BLACKLIST">
+        <strong>BLACKLIST</strong> = <code>[<span class="s">&quot;12345678901&quot;</span>, <span class="s">&quot;1235678999&quot;</span>, <span class="s">&quot;12345678900&quot;</span>]</code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="FORMATTED_REGEX">
+        <strong>FORMATTED_REGEX</strong> = <code><span class="s">/^[0-9]{3}.[0-9]{3}.[0-9]{3}-[0-9]{2}$/</span>i</code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="UNFORMATTED_REGEX">
+        <strong>UNFORMATTED_REGEX</strong> = <code><span class="s">/^[0-9]{11}$/</span>i</code>
+      </dt>
+      
+    
+  </dl>
+
+
+
+
+
+
+
+  <h2>Instance Method Summary</h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#format%28cpf%3AString%29-instance-method" class="signature"><strong>#format</strong>(cpf : String)</a>
+        
+          <div class="summary"><p>Formats a CPF using the pattern <code>XXX.XXX.XXX-XX</code>.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#formatted%3F%28cpf%3AString%29-instance-method" class="signature"><strong>#formatted?</strong>(cpf : String)</a>
+        
+          <div class="summary"><p>Checks whether a CPF is formatted correctly or not.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#generate%28format%3ABool%3Dfalse%29-instance-method" class="signature"><strong>#generate</strong>(format : Bool = <span class="n">false</span>)</a>
+        
+          <div class="summary"><p>Generates a randomic valid CPF.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#valid%3F%28cpf%3AString%29-instance-method" class="signature"><strong>#valid?</strong>(cpf : String)</a>
+        
+          <div class="summary"><p>Returns whether a CPF is valid or not.</p></div>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+<div class="methods-inherited">
+  
+</div>
+
+
+
+
+
+
+  <h2>Instance Method Detail</h2>
+  
+    <div class="entry-detail" id="format(cpf:String)-instance-method">
+      <div class="signature">
+        
+        def <strong>format</strong>(cpf : String)
+
+        <a class="method-permalink" href="#format%28cpf%3AString%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Formats a CPF using the pattern <code>XXX.XXX.XXX-XX</code>.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/vnbrs/burocracia.cr/blob/d79164846a144a90caf64ab8bb70b135d4011d9e/src/burocracia/cpf.cr#L49" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="formatted?(cpf:String)-instance-method">
+      <div class="signature">
+        
+        def <strong>formatted?</strong>(cpf : String)
+
+        <a class="method-permalink" href="#formatted%3F%28cpf%3AString%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Checks whether a CPF is formatted correctly or not.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/vnbrs/burocracia.cr/blob/d79164846a144a90caf64ab8bb70b135d4011d9e/src/burocracia/cpf.cr#L43" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="generate(format:Bool=false)-instance-method">
+      <div class="signature">
+        
+        def <strong>generate</strong>(format : Bool = <span class="n">false</span>)
+
+        <a class="method-permalink" href="#generate%28format%3ABool%3Dfalse%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Generates a randomic valid CPF.</p>
+
+<p>If you want to get a formatted new CPF, you can pass an argument to the format
+parameter.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/vnbrs/burocracia.cr/blob/d79164846a144a90caf64ab8bb70b135d4011d9e/src/burocracia/cpf.cr#L36" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="valid?(cpf:String)-instance-method">
+      <div class="signature">
+        
+        def <strong>valid?</strong>(cpf : String)
+
+        <a class="method-permalink" href="#valid%3F%28cpf%3AString%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Returns whether a CPF is valid or not.</p>
+
+<p><span class="flag purple">NOTE</span>  This <em>will not</em> fetch the CPF in the Receita Federal database to check the existance.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/vnbrs/burocracia.cr/blob/d79164846a144a90caf64ab8bb70b135d4011d9e/src/burocracia/cpf.cr#L17" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+
+</div>
+
+</body>
+</html>
