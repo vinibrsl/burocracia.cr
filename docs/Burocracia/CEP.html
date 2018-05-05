@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta id="repository-name" content="github.com/vnbrs/burocracia.cr">
+  <link href="../css/style.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="../js/doc.js"></script>
+  <title>Burocracia::CEP - github.com/vnbrs/burocracia.cr</title>
+</head>
+<body>
+
+<div id="types-list">
+  <div id="search-box">
+    <input type="search" id="search-input" placeholder="Search...">
+  </div>
+
+  <ul>
+    <li><a href="../index.html">README</a></li>
+  </ul>
+
+  <ul>
+  
+  <li class="parent open current" data-id="github.com/vnbrs/burocracia.cr/Burocracia" data-name="burocracia">
+      <a href="../Burocracia.html">Burocracia</a>
+      
+        <ul>
+  
+  <li class=" current" data-id="github.com/vnbrs/burocracia.cr/Burocracia/CEP" data-name="burocracia::cep">
+      <a href="../Burocracia/CEP.html">CEP</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+</div>
+
+<div id="main-content">
+<h1 class="type-name">
+
+  <span class="kind">module</span> Burocracia::CEP
+
+</h1>
+
+
+
+
+
+  <h2>Overview</h2>
+
+  <p>The CEP module offers methods to validate, generate and format Brazilian post codes.</p>
+
+
+
+
+
+
+
+  <h2>Extended Modules</h2>
+  <ul class="other-types-list">
+  
+    <li class="other-type"><a href="../Burocracia/CEP.html">Burocracia::CEP</a></li>
+  
+  </ul>
+
+
+
+
+
+
+
+
+  <h2>Defined in:</h2>
+  
+    
+      <a href="https://github.com/vnbrs/burocracia.cr/blob/d509d2cc28af94ce9ec974eac46b97cb8a373d6b/src/burocracia/cep.cr#L3" target="_blank">burocracia/cep.cr</a>
+    
+    <br/>
+  
+
+
+
+  
+    <h2>Constant Summary</h2>
+  
+  <dl>
+    
+      <dt class="entry-const" id="FORMATTED_REGEX">
+        <strong>FORMATTED_REGEX</strong> = <code><span class="s">/^[0-9]{5}-[0-9]{3}$/</span>i</code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="UNFORMATTED_REGEX">
+        <strong>UNFORMATTED_REGEX</strong> = <code><span class="s">/^[0-9]{8}$/</span>i</code>
+      </dt>
+      
+    
+  </dl>
+
+
+
+
+
+
+
+  <h2>Instance Method Summary</h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#format%28cep%29-instance-method" class="signature"><strong>#format</strong>(cep)</a>
+        
+          <div class="summary"><p>Formats a CEP using the pattern <code>XXXXX-XXX</code>.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#formatted%3F%28cep%29-instance-method" class="signature"><strong>#formatted?</strong>(cep)</a>
+        
+          <div class="summary"><p>Checks whether a CEP is formatted correctly or not.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#generate%28format%3Dfalse%29-instance-method" class="signature"><strong>#generate</strong>(format = <span class="n">false</span>)</a>
+        
+          <div class="summary"><p>Generates a randomic valid CEP.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#valid%3F%28cep%29-instance-method" class="signature"><strong>#valid?</strong>(cep)</a>
+        
+          <div class="summary"><p>Returns whether a CEP is valid or not.</p></div>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+<div class="methods-inherited">
+  
+</div>
+
+
+
+
+
+
+  <h2>Instance Method Detail</h2>
+  
+    <div class="entry-detail" id="format(cep)-instance-method">
+      <div class="signature">
+        
+        def <strong>format</strong>(cep)
+
+        <a class="method-permalink" href="#format%28cep%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Formats a CEP using the pattern <code>XXXXX-XXX</code>.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/vnbrs/burocracia.cr/blob/d509d2cc28af94ce9ec974eac46b97cb8a373d6b/src/burocracia/cep.cr#L43" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="formatted?(cep)-instance-method">
+      <div class="signature">
+        
+        def <strong>formatted?</strong>(cep)
+
+        <a class="method-permalink" href="#formatted%3F%28cep%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Checks whether a CEP is formatted correctly or not.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/vnbrs/burocracia.cr/blob/d509d2cc28af94ce9ec974eac46b97cb8a373d6b/src/burocracia/cep.cr#L37" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="generate(format=false)-instance-method">
+      <div class="signature">
+        
+        def <strong>generate</strong>(format = <span class="n">false</span>)
+
+        <a class="method-permalink" href="#generate%28format%3Dfalse%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Generates a randomic valid CEP.</p>
+
+<p>If you want to get a formatted new CEP, you can pass an argument to the format
+parameter.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/vnbrs/burocracia.cr/blob/d509d2cc28af94ce9ec974eac46b97cb8a373d6b/src/burocracia/cep.cr#L22" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="valid?(cep)-instance-method">
+      <div class="signature">
+        
+        def <strong>valid?</strong>(cep)
+
+        <a class="method-permalink" href="#valid%3F%28cep%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Returns whether a CEP is valid or not.</p>
+
+<p><span class="flag purple">NOTE</span>  This will not fetch the CEP in the Correios database to check the existance.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/vnbrs/burocracia.cr/blob/d509d2cc28af94ce9ec974eac46b97cb8a373d6b/src/burocracia/cep.cr#L12" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+
+</div>
+
+</body>
+</html>
