@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta id="repository-name" content="github.com/vnbrs/burocracia.cr">
+  <link href="../css/style.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="../js/doc.js"></script>
+  <title>Burocracia::Generator - github.com/vnbrs/burocracia.cr</title>
+</head>
+<body>
+
+<div id="types-list">
+  <div id="search-box">
+    <input type="search" id="search-input" placeholder="Search...">
+  </div>
+
+  <ul>
+    <li><a href="../index.html">README</a></li>
+  </ul>
+
+  <ul>
+  
+  <li class="parent open current" data-id="github.com/vnbrs/burocracia.cr/Burocracia" data-name="burocracia">
+      <a href="../Burocracia.html">Burocracia</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/vnbrs/burocracia.cr/Burocracia/CEP" data-name="burocracia::cep">
+      <a href="../Burocracia/CEP.html">CEP</a>
+      
+    </li>
+  
+  <li class=" current" data-id="github.com/vnbrs/burocracia.cr/Burocracia/Generator" data-name="burocracia::generator">
+      <a href="../Burocracia/Generator.html">Generator</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/vnbrs/burocracia.cr/Burocracia/Sanitizer" data-name="burocracia::sanitizer">
+      <a href="../Burocracia/Sanitizer.html">Sanitizer</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+</div>
+
+<div id="main-content">
+<h1 class="type-name">
+
+  <span class="kind">module</span> Burocracia::Generator
+
+</h1>
+
+
+
+
+
+  <h2>Overview</h2>
+
+  <p>Module responsible for generating randomic low-level information</p>
+
+
+
+
+
+
+
+  <h2>Extended Modules</h2>
+  <ul class="other-types-list">
+  
+    <li class="other-type"><a href="../Burocracia/Generator.html">Burocracia::Generator</a></li>
+  
+  </ul>
+
+
+
+
+
+
+
+
+  <h2>Defined in:</h2>
+  
+    
+      <a href="https://github.com/vnbrs/burocracia.cr/blob/71a2e0f6a24746b03c1e4db4972d7910e528c1b9/src/burocracia/generator.cr#L3" target="_blank">burocracia/generator.cr</a>
+    
+    <br/>
+  
+
+
+
+
+
+
+
+
+
+  <h2>Instance Method Summary</h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#random_numbers%28size%2Crandomifier%3DRandom%29-instance-method" class="signature"><strong>#random_numbers</strong>(size, randomifier = <span class="t">Random</span>)</a>
+        
+          <div class="summary"><p>Generates a string with random numbers.</p></div>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+<div class="methods-inherited">
+  
+</div>
+
+
+
+
+
+
+  <h2>Instance Method Detail</h2>
+  
+    <div class="entry-detail" id="random_numbers(size,randomifier=Random)-instance-method">
+      <div class="signature">
+        
+        def <strong>random_numbers</strong>(size, randomifier = <span class="t">Random</span>)
+
+        <a class="method-permalink" href="#random_numbers%28size%2Crandomifier%3DRandom%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Generates a string with random numbers.</p>
+
+<pre><code class='language-crystal'><span class="t">Burocracia</span><span class="t">::</span><span class="t">Generator</span>.random_numbers(size: <span class="n">3</span>)
+=> <span class="s">&quot;139&quot;</span></code></pre>
+
+<p>If needed, you can pass your own <code>Random</code> instance:</p>
+
+<pre><code class='language-crystal'><span class="t">Burocracia</span><span class="t">::</span><span class="t">Generator</span>.random_numbers(size: <span class="n">5</span>, randomifier: <span class="t">MyRandomClass</span>)
+=> <span class="s">&quot;002&quot;</span></code></pre>
+
+<p><span class="flag purple">NOTE</span>  The randomifier class or module must implement a function called <code>rand</code>
+that accepts a <code>Range</code> and returns an <code>Object</code> with a <code>to_s</code> method.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/vnbrs/burocracia.cr/blob/71a2e0f6a24746b03c1e4db4972d7910e528c1b9/src/burocracia/generator.cr#L22" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+
+</div>
+
+</body>
+</html>
