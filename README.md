@@ -16,6 +16,18 @@ dependencies:
 
 ```crystal
 require "burocracia"
+
+Burocracia::CEP.generate
+=> "23230133"
+
+Burocracia::CEP.generate(format: true)
+=> "71946-192"
+
+Burocracia::CEP.valid? "80210130"
+=> true
+
+Burocracia::CEP.valid? "80210-130"
+=> true
 ```
 
 ## Contributing
