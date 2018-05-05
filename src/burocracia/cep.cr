@@ -5,6 +5,7 @@ module Burocracia
   # The CEP module offers methods to validate, generate and format Brazilian post codes.
   module CEP
     extend self
+    extend Burocracia::Sanitizer
 
     FORMATTED_REGEX   = /^[0-9]{5}-[0-9]{3}$/i
     UNFORMATTED_REGEX = /^[0-9]{8}$/i
@@ -14,7 +15,7 @@ module Burocracia
     #
     # NOTE: This will not fetch the CEP in the Correios database to check the existance.
     def valid?(cep : String)
-      sanitized = Burocracia::Sanitizer.sanitize(cep)
+      sanitized = sanitize(cep)
       return false if BLACKLIST.includes? sanitized
       return false if sanitized.chars.uniq.size == 1
       return false if (cep =~ FORMATTED_REGEX + UNFORMATTED_REGEX).nil?
