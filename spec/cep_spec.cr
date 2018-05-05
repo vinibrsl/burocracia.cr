@@ -105,4 +105,10 @@ describe Burocracia::CEP do
       end
     end
   end
+
+  describe "#sanitize" do
+    it "clears a formatted cep" do
+      Burocracia::CEP.sanitize("80210-130").should eq("80210130")
+    end
+  end
 end
