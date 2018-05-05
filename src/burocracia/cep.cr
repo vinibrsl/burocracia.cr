@@ -1,3 +1,6 @@
+require "./sanitizer"
+require "./generator"
+
 module Burocracia
   # The CEP module offers methods to validate, generate and format Brazilian post codes.
   module CEP
@@ -5,12 +8,15 @@ module Burocracia
 
     FORMATTED_REGEX   = /^[0-9]{5}-[0-9]{3}$/i
     UNFORMATTED_REGEX = /^[0-9]{8}$/i
+    BLACKLIST         = ["12345678", "87654321"]
 
     # Returns whether a CEP is valid or not.
     #
     # NOTE: This will not fetch the CEP in the Correios database to check the existance.
-    def valid?(cep)
-      return false if cep.chars.uniq.size == 1
+    def valid?(cep : String)
+      sanitized = Burocracia::Sanitizer.sanitize(cep)
+      return false if BLACKLIST.includes? sanitized
+      return false if sanitized.chars.uniq.size == 1
       return false if (cep =~ FORMATTED_REGEX + UNFORMATTED_REGEX).nil?
       true
     end
@@ -19,28 +25,20 @@ module Burocracia
     #
     # If you want to get a formatted new CEP, you can pass an argument to the format
     # parameter.
-    def generate(format = false)
-      generated = ""
-
-      loop do
-        generated += Random.new.rand(0..9).to_s
-        break if generated.size == 8
-      end
-
+    def generate(format : Bool = false)
+      generated = Burocracia::Generator.random_numbers(size: 8)
       generated = generate(format) if !valid?(generated)
-      generated = format(generated) if format
-
-      generated
+      format ? format(generated) : generated
     end
 
     # Checks whether a CEP is formatted correctly or not.
-    def formatted?(cep)
+    def formatted?(cep : String)
       return false if (cep =~ FORMATTED_REGEX).nil?
       true
     end
 
     # Formats a CEP using the pattern `XXXXX-XXX`.
-    def format(cep)
+    def format(cep : String)
       return cep if formatted?(cep)
       "#{cep[0..4]}-#{cep[5..7]}"
     end

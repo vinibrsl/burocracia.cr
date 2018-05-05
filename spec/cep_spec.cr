@@ -34,6 +34,18 @@ describe Burocracia::CEP do
       valid = Burocracia::CEP.valid? "80210-130"
       valid.should be_true
     end
+
+    context "when the cep is blacklisted" do
+      it "returns false" do
+        cep = Burocracia::CEP::BLACKLIST.sample
+        Burocracia::CEP.valid?(cep).should be_false
+      end
+
+      it "returns false" do
+        cep = Burocracia::CEP.format(Burocracia::CEP::BLACKLIST.sample)
+        Burocracia::CEP.valid?(cep).should be_false
+      end
+    end
   end
 
   describe "#formatted?" do
