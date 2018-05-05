@@ -30,6 +30,16 @@
       
     </li>
   
+  <li class=" " data-id="github.com/vnbrs/burocracia.cr/Burocracia/Generator" data-name="burocracia::generator">
+      <a href="../Burocracia/Generator.html">Generator</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/vnbrs/burocracia.cr/Burocracia/Sanitizer" data-name="burocracia::sanitizer">
+      <a href="../Burocracia/Sanitizer.html">Sanitizer</a>
+      
+    </li>
+  
 </ul>
 
       
@@ -77,7 +87,7 @@
   <h2>Defined in:</h2>
   
     
-      <a href="https://github.com/vnbrs/burocracia.cr/blob/d509d2cc28af94ce9ec974eac46b97cb8a373d6b/src/burocracia/cep.cr#L3" target="_blank">burocracia/cep.cr</a>
+      <a href="https://github.com/vnbrs/burocracia.cr/blob/71a2e0f6a24746b03c1e4db4972d7910e528c1b9/src/burocracia/cep.cr#L6" target="_blank">burocracia/cep.cr</a>
     
     <br/>
   
@@ -88,6 +98,11 @@
     <h2>Constant Summary</h2>
   
   <dl>
+    
+      <dt class="entry-const" id="BLACKLIST">
+        <strong>BLACKLIST</strong> = <code>[<span class="s">&quot;12345678&quot;</span>, <span class="s">&quot;87654321&quot;</span>]</code>
+      </dt>
+      
     
       <dt class="entry-const" id="FORMATTED_REGEX">
         <strong>FORMATTED_REGEX</strong> = <code><span class="s">/^[0-9]{5}-[0-9]{3}$/</span>i</code>
@@ -111,28 +126,28 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#format%28cep%29-instance-method" class="signature"><strong>#format</strong>(cep)</a>
+        <a href="#format%28cep%3AString%29-instance-method" class="signature"><strong>#format</strong>(cep : String)</a>
         
           <div class="summary"><p>Formats a CEP using the pattern <code>XXXXX-XXX</code>.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#formatted%3F%28cep%29-instance-method" class="signature"><strong>#formatted?</strong>(cep)</a>
+        <a href="#formatted%3F%28cep%3AString%29-instance-method" class="signature"><strong>#formatted?</strong>(cep : String)</a>
         
           <div class="summary"><p>Checks whether a CEP is formatted correctly or not.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#generate%28format%3Dfalse%29-instance-method" class="signature"><strong>#generate</strong>(format = <span class="n">false</span>)</a>
+        <a href="#generate%28format%3ABool%3Dfalse%29-instance-method" class="signature"><strong>#generate</strong>(format : Bool = <span class="n">false</span>)</a>
         
           <div class="summary"><p>Generates a randomic valid CEP.</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#valid%3F%28cep%29-instance-method" class="signature"><strong>#valid?</strong>(cep)</a>
+        <a href="#valid%3F%28cep%3AString%29-instance-method" class="signature"><strong>#valid?</strong>(cep : String)</a>
         
           <div class="summary"><p>Returns whether a CEP is valid or not.</p></div>
         
@@ -155,12 +170,12 @@
 
   <h2>Instance Method Detail</h2>
   
-    <div class="entry-detail" id="format(cep)-instance-method">
+    <div class="entry-detail" id="format(cep:String)-instance-method">
       <div class="signature">
         
-        def <strong>format</strong>(cep)
+        def <strong>format</strong>(cep : String)
 
-        <a class="method-permalink" href="#format%28cep%29-instance-method">#</a>
+        <a class="method-permalink" href="#format%28cep%3AString%29-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Formats a CEP using the pattern <code>XXXXX-XXX</code>.</p></div>
@@ -168,17 +183,17 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/vnbrs/burocracia.cr/blob/d509d2cc28af94ce9ec974eac46b97cb8a373d6b/src/burocracia/cep.cr#L43" target="_blank">View source</a>]
+          [<a href="https://github.com/vnbrs/burocracia.cr/blob/71a2e0f6a24746b03c1e4db4972d7910e528c1b9/src/burocracia/cep.cr#L41" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="formatted?(cep)-instance-method">
+    <div class="entry-detail" id="formatted?(cep:String)-instance-method">
       <div class="signature">
         
-        def <strong>formatted?</strong>(cep)
+        def <strong>formatted?</strong>(cep : String)
 
-        <a class="method-permalink" href="#formatted%3F%28cep%29-instance-method">#</a>
+        <a class="method-permalink" href="#formatted%3F%28cep%3AString%29-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Checks whether a CEP is formatted correctly or not.</p></div>
@@ -186,17 +201,17 @@
       <br/>
       <div>
         
-          [<a href="https://github.com/vnbrs/burocracia.cr/blob/d509d2cc28af94ce9ec974eac46b97cb8a373d6b/src/burocracia/cep.cr#L37" target="_blank">View source</a>]
+          [<a href="https://github.com/vnbrs/burocracia.cr/blob/71a2e0f6a24746b03c1e4db4972d7910e528c1b9/src/burocracia/cep.cr#L35" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="generate(format=false)-instance-method">
+    <div class="entry-detail" id="generate(format:Bool=false)-instance-method">
       <div class="signature">
         
-        def <strong>generate</strong>(format = <span class="n">false</span>)
+        def <strong>generate</strong>(format : Bool = <span class="n">false</span>)
 
-        <a class="method-permalink" href="#generate%28format%3Dfalse%29-instance-method">#</a>
+        <a class="method-permalink" href="#generate%28format%3ABool%3Dfalse%29-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Generates a randomic valid CEP.</p>
@@ -207,17 +222,17 @@ parameter.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/vnbrs/burocracia.cr/blob/d509d2cc28af94ce9ec974eac46b97cb8a373d6b/src/burocracia/cep.cr#L22" target="_blank">View source</a>]
+          [<a href="https://github.com/vnbrs/burocracia.cr/blob/71a2e0f6a24746b03c1e4db4972d7910e528c1b9/src/burocracia/cep.cr#L28" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="valid?(cep)-instance-method">
+    <div class="entry-detail" id="valid?(cep:String)-instance-method">
       <div class="signature">
         
-        def <strong>valid?</strong>(cep)
+        def <strong>valid?</strong>(cep : String)
 
-        <a class="method-permalink" href="#valid%3F%28cep%29-instance-method">#</a>
+        <a class="method-permalink" href="#valid%3F%28cep%3AString%29-instance-method">#</a>
       </div>
       
         <div class="doc"><p>Returns whether a CEP is valid or not.</p>
@@ -227,7 +242,7 @@ parameter.</p></div>
       <br/>
       <div>
         
-          [<a href="https://github.com/vnbrs/burocracia.cr/blob/d509d2cc28af94ce9ec974eac46b97cb8a373d6b/src/burocracia/cep.cr#L12" target="_blank">View source</a>]
+          [<a href="https://github.com/vnbrs/burocracia.cr/blob/71a2e0f6a24746b03c1e4db4972d7910e528c1b9/src/burocracia/cep.cr#L16" target="_blank">View source</a>]
         
       </div>
     </div>

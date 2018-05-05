@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta id="repository-name" content="github.com/vnbrs/burocracia.cr">
+  <link href="../css/style.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="../js/doc.js"></script>
+  <title>Burocracia::Sanitizer - github.com/vnbrs/burocracia.cr</title>
+</head>
+<body>
+
+<div id="types-list">
+  <div id="search-box">
+    <input type="search" id="search-input" placeholder="Search...">
+  </div>
+
+  <ul>
+    <li><a href="../index.html">README</a></li>
+  </ul>
+
+  <ul>
+  
+  <li class="parent open current" data-id="github.com/vnbrs/burocracia.cr/Burocracia" data-name="burocracia">
+      <a href="../Burocracia.html">Burocracia</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/vnbrs/burocracia.cr/Burocracia/CEP" data-name="burocracia::cep">
+      <a href="../Burocracia/CEP.html">CEP</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/vnbrs/burocracia.cr/Burocracia/Generator" data-name="burocracia::generator">
+      <a href="../Burocracia/Generator.html">Generator</a>
+      
+    </li>
+  
+  <li class=" current" data-id="github.com/vnbrs/burocracia.cr/Burocracia/Sanitizer" data-name="burocracia::sanitizer">
+      <a href="../Burocracia/Sanitizer.html">Sanitizer</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+</div>
+
+<div id="main-content">
+<h1 class="type-name">
+
+  <span class="kind">module</span> Burocracia::Sanitizer
+
+</h1>
+
+
+
+
+
+  <h2>Overview</h2>
+
+  <p>Module resposible to normalize string inputs.</p>
+
+
+
+
+
+
+
+  <h2>Extended Modules</h2>
+  <ul class="other-types-list">
+  
+    <li class="other-type"><a href="../Burocracia/Sanitizer.html">Burocracia::Sanitizer</a></li>
+  
+  </ul>
+
+
+
+
+
+
+
+
+  <h2>Defined in:</h2>
+  
+    
+      <a href="https://github.com/vnbrs/burocracia.cr/blob/71a2e0f6a24746b03c1e4db4972d7910e528c1b9/src/burocracia/sanitizer.cr#L3" target="_blank">burocracia/sanitizer.cr</a>
+    
+    <br/>
+  
+
+
+
+
+
+
+
+
+
+  <h2>Instance Method Summary</h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#sanitize%28str%3AString%29-instance-method" class="signature"><strong>#sanitize</strong>(str : String)</a>
+        
+          <div class="summary"><p>Normalizes and sanitizes a string input, removing anything but numbers.</p></div>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+<div class="methods-inherited">
+  
+</div>
+
+
+
+
+
+
+  <h2>Instance Method Detail</h2>
+  
+    <div class="entry-detail" id="sanitize(str:String)-instance-method">
+      <div class="signature">
+        
+        def <strong>sanitize</strong>(str : String)
+
+        <a class="method-permalink" href="#sanitize%28str%3AString%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Normalizes and sanitizes a string input, removing anything
+but numbers.</p>
+
+<pre><code class='language-crystal'><span class="t">CEP</span><span class="t">::</span><span class="t">Sanitizer</span>.sanitize(<span class="s">&quot;108.291.921-23&quot;</span>)
+=> <span class="s">&quot;10829192123&quot;</span></code></pre></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/vnbrs/burocracia.cr/blob/71a2e0f6a24746b03c1e4db4972d7910e528c1b9/src/burocracia/sanitizer.cr#L13" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+
+</div>
+
+</body>
+</html>
