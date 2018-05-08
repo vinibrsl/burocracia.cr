@@ -33,6 +33,9 @@ Burocracia::CPF.valid?("10880423971")
 
 Burocracia::CNPJ.format("92583745000149")
 => "92.583.745/0001-49"
+
+Burocracia::CNPJ.sanitize("92.583.745/0001-49")
+=> "92583745000149"
 ```
 
 Leia a documentação completa, em inglês, [aqui](https://vnbrs.github.io/burocracia.cr/Burocracia).
