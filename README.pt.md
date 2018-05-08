@@ -45,6 +45,8 @@ Leia a documentação completa, em inglês, [aqui](https://vnbrs.github.io/buroc
 4. Faça um push para a nova branch (git push origin my-new-feature)
 5. Crie um Pull Request
 
+Por favor, não esqueça de documentar o código e rodar `crystal docs` para aplicar as alterações na pasta `/docs`.
+
 ## Contribuidores
 
 - [vnbrs](https://github.com/vnbrs) Vinicius Brasil - criador, mantenedor
