@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta id="repository-name" content="github.com/vnbrs/burocracia.cr">
+  <link href="../css/style.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="../js/doc.js"></script>
+  <title>Burocracia::CNPJ - github.com/vnbrs/burocracia.cr</title>
+</head>
+<body>
+
+<div id="types-list">
+  <div id="search-box">
+    <input type="search" id="search-input" placeholder="Search...">
+  </div>
+
+  <ul>
+    <li><a href="../index.html">README</a></li>
+  </ul>
+
+  <ul>
+  
+  <li class="parent open current" data-id="github.com/vnbrs/burocracia.cr/Burocracia" data-name="burocracia">
+      <a href="../Burocracia.html">Burocracia</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/vnbrs/burocracia.cr/Burocracia/CEP" data-name="burocracia::cep">
+      <a href="../Burocracia/CEP.html">CEP</a>
+      
+    </li>
+  
+  <li class=" current" data-id="github.com/vnbrs/burocracia.cr/Burocracia/CNPJ" data-name="burocracia::cnpj">
+      <a href="../Burocracia/CNPJ.html">CNPJ</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/vnbrs/burocracia.cr/Burocracia/CPF" data-name="burocracia::cpf">
+      <a href="../Burocracia/CPF.html">CPF</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/vnbrs/burocracia.cr/Burocracia/Generator" data-name="burocracia::generator">
+      <a href="../Burocracia/Generator.html">Generator</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/vnbrs/burocracia.cr/Burocracia/Sanitizer" data-name="burocracia::sanitizer">
+      <a href="../Burocracia/Sanitizer.html">Sanitizer</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+</div>
+
+<div id="main-content">
+<h1 class="type-name">
+
+  <span class="kind">module</span> Burocracia::CNPJ
+
+</h1>
+
+
+
+
+
+  <h2>Overview</h2>
+
+  <p>The CNPJ module offers methods to validate, generate and format Brazilian CNPJs.</p>
+
+
+
+
+
+
+
+  <h2>Extended Modules</h2>
+  <ul class="other-types-list">
+  
+    <li class="other-type"><a href="../Burocracia/CNPJ.html">Burocracia::CNPJ</a></li>
+  
+    <li class="other-type"><a href="../Burocracia/Sanitizer.html">Burocracia::Sanitizer</a></li>
+  
+  </ul>
+
+
+
+
+
+
+
+
+  <h2>Defined in:</h2>
+  
+    
+      <a href="https://github.com/vnbrs/burocracia.cr/blob/f2b335a1bf8e31eca447640a61e33a5f5ccebab7/src/burocracia/cnpj.cr#L6" target="_blank">burocracia/cnpj.cr</a>
+    
+    <br/>
+  
+
+
+
+  
+    <h2>Constant Summary</h2>
+  
+  <dl>
+    
+      <dt class="entry-const" id="BLACKLIST">
+        <strong>BLACKLIST</strong> = <code>[<span class="s">&quot;12345678912345&quot;</span>, <span class="s">&quot;12345678900000&quot;</span>, <span class="s">&quot;12345678999999&quot;</span>, <span class="s">&quot;12345678911111&quot;</span>]</code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="FORMATTED_REGEX">
+        <strong>FORMATTED_REGEX</strong> = <code><span class="s">/^\d{2}.\d{3}.\d{3}\/\d{4}-\d{2}$/</span>i</code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="UNFORMATTED_REGEX">
+        <strong>UNFORMATTED_REGEX</strong> = <code><span class="s">/^[0-9]{14}$/</span>i</code>
+      </dt>
+      
+    
+  </dl>
+
+
+
+
+
+
+
+  <h2>Instance Method Summary</h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#format%28cnpj%3AString%29%3AString-instance-method" class="signature"><strong>#format</strong>(cnpj : String) : String</a>
+        
+          <div class="summary"><p>Formats a CNPJ using the pattern <code>XX.XXX.XXX/XXXX-XX</code>.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#formatted%3F%28cnpj%3AString%29%3ABool-instance-method" class="signature"><strong>#formatted?</strong>(cnpj : String) : Bool</a>
+        
+          <div class="summary"><p>Checks whether a CNPJ is formatted correctly or not.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#generate%28format%3ABool%3Dfalse%29%3AString-instance-method" class="signature"><strong>#generate</strong>(format : Bool = <span class="n">false</span>) : String</a>
+        
+          <div class="summary"><p>Generates a randomic valid CNPJ.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#valid%3F%28cnpj%3AString%29%3ABool-instance-method" class="signature"><strong>#valid?</strong>(cnpj : String) : Bool</a>
+        
+          <div class="summary"><p>Returns whether a CNPJ is valid or not.</p></div>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+<div class="methods-inherited">
+  
+</div>
+
+
+
+
+
+
+  <h2>Instance Method Detail</h2>
+  
+    <div class="entry-detail" id="format(cnpj:String):String-instance-method">
+      <div class="signature">
+        
+        def <strong>format</strong>(cnpj : String) : String
+
+        <a class="method-permalink" href="#format%28cnpj%3AString%29%3AString-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Formats a CNPJ using the pattern <code>XX.XXX.XXX/XXXX-XX</code>.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/vnbrs/burocracia.cr/blob/f2b335a1bf8e31eca447640a61e33a5f5ccebab7/src/burocracia/cnpj.cr#L48" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="formatted?(cnpj:String):Bool-instance-method">
+      <div class="signature">
+        
+        def <strong>formatted?</strong>(cnpj : String) : Bool
+
+        <a class="method-permalink" href="#formatted%3F%28cnpj%3AString%29%3ABool-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Checks whether a CNPJ is formatted correctly or not.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/vnbrs/burocracia.cr/blob/f2b335a1bf8e31eca447640a61e33a5f5ccebab7/src/burocracia/cnpj.cr#L43" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="generate(format:Bool=false):String-instance-method">
+      <div class="signature">
+        
+        def <strong>generate</strong>(format : Bool = <span class="n">false</span>) : String
+
+        <a class="method-permalink" href="#generate%28format%3ABool%3Dfalse%29%3AString-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Generates a randomic valid CNPJ.</p>
+
+<p>If you want to get a formatted new CNPJ, you can pass an argument to the format
+parameter.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/vnbrs/burocracia.cr/blob/f2b335a1bf8e31eca447640a61e33a5f5ccebab7/src/burocracia/cnpj.cr#L36" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="valid?(cnpj:String):Bool-instance-method">
+      <div class="signature">
+        
+        def <strong>valid?</strong>(cnpj : String) : Bool
+
+        <a class="method-permalink" href="#valid%3F%28cnpj%3AString%29%3ABool-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Returns whether a CNPJ is valid or not.</p>
+
+<p><span class="flag purple">NOTE</span>  This <em>will not</em> fetch the CNPJ in the Receita Federal database to check the existance.</p></div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/vnbrs/burocracia.cr/blob/f2b335a1bf8e31eca447640a61e33a5f5ccebab7/src/burocracia/cnpj.cr#L17" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+
+</div>
+
+</body>
+</html>
