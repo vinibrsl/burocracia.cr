@@ -18,7 +18,7 @@ module Burocracia
       sanitized = sanitize(cnpj)
       return false if BLACKLIST.includes? sanitized
       return false if sanitized.chars.uniq.size == 1
-      return false if (cnpj =~ FORMATTED_REGEX + UNFORMATTED_REGEX).nil?
+      return false if (sanitized =~ UNFORMATTED_REGEX).nil?
 
       first_check_digit = calculate_check_digit(cnpj: sanitized, digit: 1)
       return false if sanitized[12].to_i != first_check_digit
