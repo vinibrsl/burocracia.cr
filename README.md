@@ -45,6 +45,8 @@ Read the full documentation [here](https://vnbrs.github.io/burocracia.cr/Burocra
 4. Push to the branch (git push origin my-new-feature)
 5. Create a new Pull Request
 
+Please, don't forget to document the code and return `crystal docs` to apply the changes to `/docs` folder.
+
 ## Contributors
 
 - [vnbrs](https://github.com/vnbrs) Vinicius Brasil - creator, maintainer
