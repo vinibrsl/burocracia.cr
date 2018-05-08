@@ -5,6 +5,8 @@
 
 burocracia.cr é a Crystal shard sem depdendências para validar, gerar e formatar burocracias brasileiras como CEP, CNPJ, CPF e etc.
 
+[(click here for the English version 🇺🇸)](https://github.com/vnbrs/burocracia.cr/blob/master/README.md)
+
 ## Instalação
 
 Adicione o seguinte no `shard.yml` da sua aplicação:
