@@ -1,3 +1,5 @@
+<img src="http://4.bp.blogspot.com/-A3yklQR-X8Q/VhmQKDIknzI/AAAAAAAAAJ8/ymMAMlSzKjM/s1600/burocracia.jpg" align="right" />
+
 # burocracia.cr ![Travis](https://img.shields.io/travis/vnbrs/burocracia.cr.svg) [![Dependencies](https://img.shields.io/badge/dependencies-0-green.svg)](#) [![GitHub license](https://img.shields.io/github/license/vnbrs/burocracia.cr.svg)](https://github.com/vnbrs/burocracia.cr/blob/master/LICENSE) 
 > All Brazilian boring burocracias solved
 
