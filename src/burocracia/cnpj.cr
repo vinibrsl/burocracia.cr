@@ -20,10 +20,10 @@ module Burocracia
       return false if sanitized.chars.uniq.size == 1
       return false if (cnpj =~ FORMATTED_REGEX + UNFORMATTED_REGEX).nil?
 
-      first_check_digit = calculate_check_digit(cnpj: sanitized)
+      first_check_digit = calculate_check_digit(cnpj: sanitized, digit: 1)
       return false if sanitized[12].to_i != first_check_digit
 
-      second_check_digit = calculate_check_digit(cnpj: sanitized)
+      second_check_digit = calculate_check_digit(cnpj: sanitized, digit: 2)
       return false if sanitized[13].to_i != second_check_digit
 
       true
@@ -35,7 +35,7 @@ module Burocracia
     # parameter.
     def generate(format : Bool = false) : String
       generated = Burocracia::Generator.random_numbers(size: 12)
-      1.upto 2 { |i| generated += calculate_check_digit(cnpj: generated).to_s }
+      1.upto 2 { |i| generated += calculate_check_digit(cnpj: generated, digit: i).to_s }
       format ? format(generated) : generated
     end
 
@@ -50,18 +50,15 @@ module Burocracia
       "#{cnpj[0..1]}.#{cnpj[2..4]}.#{cnpj[5..7]}/#{cnpj[8..11]}-#{cnpj[12..13]}"
     end
 
-    private def calculate_check_digit(cnpj)
+    private def calculate_check_digit(cnpj, digit)
       sum = 0
 
       weights = [5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2]
-      12.times { |i| sum += cnpj[i].to_i * weights[i] }
+      weights.insert(index: 0, object: 6) if digit == 2
+      weights.each_with_index { |weight, i| sum += cnpj[i].to_i * weight }
 
-      quotient = sum % 11
-      if quotient > 2
-        11 - quotient
-      else
-        0
-      end
+      result = 11 - (sum % 11)
+      result >= 10 ? 0 : result
     end
   end
 end
