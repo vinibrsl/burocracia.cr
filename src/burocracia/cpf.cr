@@ -41,8 +41,7 @@ module Burocracia
 
     # Checks whether a CPF is formatted correctly or not.
     def formatted?(cpf : String)
-      return false if (cpf =~ FORMATTED_REGEX).nil?
-      true
+      !(cpf =~ FORMATTED_REGEX).nil?
     end
 
     # Formats a CPF using the pattern `XXX.XXX.XXX-XX`.

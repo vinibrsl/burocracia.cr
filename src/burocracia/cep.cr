@@ -34,8 +34,7 @@ module Burocracia
 
     # Checks whether a CEP is formatted correctly or not.
     def formatted?(cep : String)
-      return false if (cep =~ FORMATTED_REGEX).nil?
-      true
+      !(cep =~ FORMATTED_REGEX).nil?
     end
 
     # Formats a CEP using the pattern `XXXXX-XXX`.
