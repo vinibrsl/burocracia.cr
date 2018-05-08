@@ -18,7 +18,7 @@ module Burocracia
       sanitized = sanitize(cep)
       return false if BLACKLIST.includes? sanitized
       return false if sanitized.chars.uniq.size == 1
-      return false if (cep =~ FORMATTED_REGEX + UNFORMATTED_REGEX).nil?
+      return false if (sanitized =~ UNFORMATTED_REGEX).nil?
       true
     end
 
