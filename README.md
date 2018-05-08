@@ -1,5 +1,5 @@
 # burocracia.cr ![Travis](https://img.shields.io/travis/vnbrs/burocracia.cr.svg) [![Dependencies](https://img.shields.io/badge/dependencies-0-green.svg)](#) [![GitHub license](https://img.shields.io/github/license/vnbrs/burocracia.cr.svg)](https://github.com/vnbrs/burocracia.cr/blob/master/LICENSE) 
-## All Brazilian boring burocracias solved
+> All Brazilian boring burocracias solved
 
 burocracia.cr is the dependecyless Crystal shard to validate, generate and format Brazilian burocracias such as CPF, CNPJ and CEP.
 
