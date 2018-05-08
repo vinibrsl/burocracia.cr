@@ -7,7 +7,7 @@ module Burocracia
     # but numbers.
     #
     # ```crystal
-    # CEP::Sanitizer.sanitize("108.291.921-23")
+    # Burocracia::Sanitizer.sanitize("108.291.921-23")
     # => "10829192123"
     # ```
     def sanitize(str : String)
