@@ -5,6 +5,8 @@
 
 burocracia.cr is the dependecyless Crystal shard to validate, generate and format Brazilian burocracias such as CPF, CNPJ and CEP.
 
+[(clique aqui para uma versão em português 🇧🇷)](https://github.com/vnbrs/burocracia.cr/blob/master/README.pt.md)
+
 ## Installation
 
 Add this to your application's `shard.yml`:
