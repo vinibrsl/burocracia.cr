@@ -1,4 +1,5 @@
-# burocracia.cr : all Brazilian burocracias solved [![Build Status](https://travis-ci.org/vnbrs/burocracia.cr.svg?branch=master)](https://travis-ci.org/vnbrs/burocracia.cr)
+# burocracia.cr ![Travis](https://img.shields.io/travis/vnbrs/burocracia.cr.svg) [![Dependencies](https://img.shields.io/badge/dependencies-0-green.svg)](#) [![GitHub license](https://img.shields.io/github/license/vnbrs/burocracia.cr.svg)](https://github.com/vnbrs/burocracia.cr/blob/master/LICENSE) 
+## All Brazilian boring burocracias solved
 
 burocracia.cr is the dependecyless Crystal shard to validate, generate and format Brazilian burocracias such as CPF, CNPJ and CEP.
 
@@ -23,11 +24,11 @@ Burocracia::CEP.generate
 Burocracia::CEP.generate(format: true)
 => "71946-192"
 
-Burocracia::CEP.valid? "80210130"
-=> true
+Burocracia::CPF.valid?("10880423971")
+=> false
 
-Burocracia::CEP.valid? "80210-130"
-=> true
+Burocracia::CNPJ.format("92583745000149")
+=> "92.583.745/0001-49"
 ```
 
 Read the full documentation [here](https://vnbrs.github.io/burocracia.cr/Burocracia).
