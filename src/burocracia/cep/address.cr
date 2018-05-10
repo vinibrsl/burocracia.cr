@@ -4,6 +4,13 @@ require "json"
 
 module Burocracia
   module CEP
+    # The `Address` struct provides API to fetch addresses using
+    # an external serivce, the Postmon API.
+    #
+    # ```crystal
+    # Burocracia::CEP::Address.find("80210130")
+    # => Burocracia::CEP::Address(@cep="80210130", @neighborhood="Jardim Botânico", @city="Curitiba", @street="Rua José Ananias Mauad", @state="PR")
+    # ```
     struct Address
       extend Sanitizer
       extend Service

@@ -25,8 +25,33 @@
       
         <ul>
   
-  <li class=" " data-id="github.com/vnbrs/burocracia.cr/Burocracia/CEP" data-name="burocracia::cep">
+  <li class="parent " data-id="github.com/vnbrs/burocracia.cr/Burocracia/CEP" data-name="burocracia::cep">
       <a href="Burocracia/CEP.html">CEP</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/vnbrs/burocracia.cr/Burocracia/CEP/Address" data-name="burocracia::cep::address">
+      <a href="Burocracia/CEP/Address.html">Address</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/vnbrs/burocracia.cr/Burocracia/CEP/ApiRequestError" data-name="burocracia::cep::apirequesterror">
+      <a href="Burocracia/CEP/ApiRequestError.html">ApiRequestError</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/vnbrs/burocracia.cr/Burocracia/CEP/Sanitizer" data-name="burocracia::cep::sanitizer">
+      <a href="Burocracia/CEP/Sanitizer.html">Sanitizer</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/vnbrs/burocracia.cr/Burocracia/CEP/Service" data-name="burocracia::cep::service">
+      <a href="Burocracia/CEP/Service.html">Service</a>
+      
+    </li>
+  
+</ul>
+
       
     </li>
   
@@ -60,9 +85,15 @@
 </div>
 
 <div id="main-content">
-<h1>burocracia.cr : all Brazilian burocracias solved <a href="https://travis-ci.org/vnbrs/burocracia.cr" target="_blank"><img src="https://travis-ci.org/vnbrs/burocracia.cr.svg?branch=master" alt="Build Status"/></a></h1>
+<p>&lt;img src="http://4.bp.blogspot.com/-A3yklQR-X8Q/VhmQKDIknzI/AAAAAAAAAJ8/ymMAMlSzKjM/s1600/burocracia.jpg" align="right" /></p>
+
+<h1>burocracia.cr <img src="https://img.shields.io/travis/vnbrs/burocracia.cr.svg" alt="Travis"/> <a href="#" target="_blank"><img src="https://img.shields.io/badge/dependencies-0-green.svg" alt="Dependencies"/></a> <a href="https://github.com/vnbrs/burocracia.cr/blob/master/LICENSE" target="_blank"><img src="https://img.shields.io/github/license/vnbrs/burocracia.cr.svg" alt="GitHub license"/></a> </h1>
+
+<blockquote>All Brazilian boring burocracias solved</blockquote>
 
 <p>burocracia.cr is the dependecyless Crystal shard to validate, generate and format Brazilian burocracias such as CPF, CNPJ and CEP.</p>
+
+<p><a href="https://github.com/vnbrs/burocracia.cr/blob/master/README.pt.md" target="_blank">(clique aqui para uma versão em português 🇧🇷)</a></p>
 
 <h2>Installation</h2>
 
@@ -82,17 +113,25 @@
 <span class="t">Burocracia</span><span class="t">::</span><span class="t">CEP</span>.generate(format: <span class="n">true</span>)
 => <span class="s">&quot;71946-192&quot;</span>
 
-<span class="t">Burocracia</span><span class="t">::</span><span class="t">CEP</span>.valid? <span class="s">&quot;80210130&quot;</span>
-=> <span class="n">true</span>
+<span class="t">Burocracia</span><span class="t">::</span><span class="t">CEP</span><span class="t">::</span><span class="t">Address</span>.find <span class="s">&quot;80210-130&quot;</span>
+=> <span class="c">#&lt;CEP::Address:0x10e1b83c0 @cep=&quot;80210130&quot;, @neighborhood=&quot;Jardim Botânico&quot;, @city=&quot;Curitiba&quot;, @street=&quot;Rua José Ananias Mauad&quot;, @state=&quot;Paraná&quot;, @state_abbreviation=&quot;PR&quot;&gt;</span>
 
-<span class="t">Burocracia</span><span class="t">::</span><span class="t">CEP</span>.valid? <span class="s">&quot;80210-130&quot;</span>
-=> <span class="n">true</span></code></pre>
+<span class="t">Burocracia</span><span class="t">::</span><span class="t">CPF</span>.valid?(<span class="s">&quot;10880423971&quot;</span>)
+=> <span class="n">false</span>
+
+<span class="t">Burocracia</span><span class="t">::</span><span class="t">CNPJ</span>.format(<span class="s">&quot;92583745000149&quot;</span>)
+=> <span class="s">&quot;92.583.745/0001-49&quot;</span>
+
+<span class="t">Burocracia</span><span class="t">::</span><span class="t">CNPJ</span>.sanitize(<span class="s">&quot;92.583.745/0001-49&quot;</span>)
+=> <span class="s">&quot;92583745000149&quot;</span></code></pre>
 
 <p>Read the full documentation <a href="https://vnbrs.github.io/burocracia.cr/Burocracia" target="_blank">here</a>.</p>
 
 <h2>Contributing</h2>
 
 <ol><li>Fork it ( https://github.com/vnbrs/burocracia.cr/fork )</li><li>Create your feature branch (git checkout -b my-new-feature)</li><li>Commit your changes (git commit -am 'Add some feature')</li><li>Push to the branch (git push origin my-new-feature)</li><li>Create a new Pull Request</li></ol>
+
+<p>Please, don't forget to document the code and run <code>crystal docs</code> to apply the changes to <code>/docs</code> folder.</p>
 
 <h2>Contributors</h2>
 
