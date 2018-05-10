@@ -4,6 +4,7 @@ require "./exceptions"
 
 module Burocracia
   module CEP
+    # This module is responsible for fetching the Postmon API
     module Service
       BASE_URL = "http://api.postmon.com.br"
 

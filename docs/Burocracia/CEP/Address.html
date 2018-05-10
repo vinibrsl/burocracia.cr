@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta id="repository-name" content="github.com/vnbrs/burocracia.cr">
+  <link href="../../css/style.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="../../js/doc.js"></script>
+  <title>Burocracia::CEP::Address - github.com/vnbrs/burocracia.cr</title>
+</head>
+<body>
+
+<div id="types-list">
+  <div id="search-box">
+    <input type="search" id="search-input" placeholder="Search...">
+  </div>
+
+  <ul>
+    <li><a href="../../index.html">README</a></li>
+  </ul>
+
+  <ul>
+  
+  <li class="parent open current" data-id="github.com/vnbrs/burocracia.cr/Burocracia" data-name="burocracia">
+      <a href="../../Burocracia.html">Burocracia</a>
+      
+        <ul>
+  
+  <li class="parent open current" data-id="github.com/vnbrs/burocracia.cr/Burocracia/CEP" data-name="burocracia::cep">
+      <a href="../../Burocracia/CEP.html">CEP</a>
+      
+        <ul>
+  
+  <li class=" current" data-id="github.com/vnbrs/burocracia.cr/Burocracia/CEP/Address" data-name="burocracia::cep::address">
+      <a href="../../Burocracia/CEP/Address.html">Address</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/vnbrs/burocracia.cr/Burocracia/CEP/ApiRequestError" data-name="burocracia::cep::apirequesterror">
+      <a href="../../Burocracia/CEP/ApiRequestError.html">ApiRequestError</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/vnbrs/burocracia.cr/Burocracia/CEP/Sanitizer" data-name="burocracia::cep::sanitizer">
+      <a href="../../Burocracia/CEP/Sanitizer.html">Sanitizer</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/vnbrs/burocracia.cr/Burocracia/CEP/Service" data-name="burocracia::cep::service">
+      <a href="../../Burocracia/CEP/Service.html">Service</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="github.com/vnbrs/burocracia.cr/Burocracia/CNPJ" data-name="burocracia::cnpj">
+      <a href="../../Burocracia/CNPJ.html">CNPJ</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/vnbrs/burocracia.cr/Burocracia/CPF" data-name="burocracia::cpf">
+      <a href="../../Burocracia/CPF.html">CPF</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/vnbrs/burocracia.cr/Burocracia/Generator" data-name="burocracia::generator">
+      <a href="../../Burocracia/Generator.html">Generator</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/vnbrs/burocracia.cr/Burocracia/Sanitizer" data-name="burocracia::sanitizer">
+      <a href="../../Burocracia/Sanitizer.html">Sanitizer</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+</div>
+
+<div id="main-content">
+<h1 class="type-name">
+
+  <span class="kind">struct</span> Burocracia::CEP::Address
+
+</h1>
+
+
+  <ul class="superclass-hierarchy"><li class="superclass"><a href="../../Burocracia/CEP/Address.html">Burocracia::CEP::Address</a></li><li class="superclass">Struct</li><li class="superclass">Value</li><li class="superclass">Object</li></ul>
+
+
+
+
+  <h2>Overview</h2>
+
+  <p>The <code><a href="../../Burocracia/CEP/Address.html">Address</a></code> struct provides API to fetch addresses using
+an external serivce, the Postmon API.</p>
+
+<pre><code class='language-crystal'><span class="t">Burocracia</span><span class="t">::</span><span class="t">CEP</span><span class="t">::</span><span class="t">Address</span>.find(<span class="s">&quot;80210130&quot;</span>)
+=> <span class="t">Burocracia</span><span class="t">::</span><span class="t">CEP</span><span class="t">::</span><span class="t">Address</span>(@cep<span class="o">=</span><span class="s">&quot;80210130&quot;</span>, @neighborhood<span class="o">=</span><span class="s">&quot;Jardim Botânico&quot;</span>, @city<span class="o">=</span><span class="s">&quot;Curitiba&quot;</span>, @street<span class="o">=</span><span class="s">&quot;Rua José Ananias Mauad&quot;</span>, @state<span class="o">=</span><span class="s">&quot;PR&quot;</span>)</code></pre>
+
+
+
+
+
+
+
+  <h2>Extended Modules</h2>
+  <ul class="other-types-list">
+  
+    <li class="other-type"><a href="../../Burocracia/CEP/Sanitizer.html">Burocracia::CEP::Sanitizer</a></li>
+  
+    <li class="other-type"><a href="../../Burocracia/CEP/Service.html">Burocracia::CEP::Service</a></li>
+  
+  </ul>
+
+
+
+
+
+
+
+
+  <h2>Defined in:</h2>
+  
+    
+      <a href="https://github.com/vnbrs/burocracia.cr/blob/28ceb5af5dfa6c2c50852a6e6261dc102d287260/src/burocracia/cep/address.cr#L14" target="_blank">burocracia/cep/address.cr</a>
+    
+    <br/>
+  
+
+
+
+
+
+  <h2>Constructors</h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#new%28__temp_33%3AJSON%3A%3APullParser%29-class-method" class="signature"><strong>.new</strong>(__temp_33 : JSON::PullParser)</a>
+        
+      </li>
+    
+  </ul>
+
+
+
+  <h2>Class Method Summary</h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#find%28cep%29-class-method" class="signature"><strong>.find</strong>(cep)</a>
+        
+      </li>
+    
+  </ul>
+
+
+
+  <h2>Instance Method Summary</h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#cep%3AString-instance-method" class="signature"><strong>#cep</strong> : String</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#cep%3D%28_cep%3AString%29-instance-method" class="signature"><strong>#cep=</strong>(_cep : String)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#city%3AString-instance-method" class="signature"><strong>#city</strong> : String</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#city%3D%28_city%3AString%29-instance-method" class="signature"><strong>#city=</strong>(_city : String)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#neighborhood%3AString-instance-method" class="signature"><strong>#neighborhood</strong> : String</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#neighborhood%3D%28_neighborhood%3AString%29-instance-method" class="signature"><strong>#neighborhood=</strong>(_neighborhood : String)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#state%3AString-instance-method" class="signature"><strong>#state</strong> : String</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#state%3D%28_state%3AString%29-instance-method" class="signature"><strong>#state=</strong>(_state : String)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#street%3AString-instance-method" class="signature"><strong>#street</strong> : String</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#street%3D%28_street%3AString%29-instance-method" class="signature"><strong>#street=</strong>(_street : String)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#to_json%28json%3AJSON%3A%3ABuilder%29-instance-method" class="signature"><strong>#to_json</strong>(json : JSON::Builder)</a>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+<div class="methods-inherited">
+  
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+  
+</div>
+
+
+  <h2>Constructor Detail</h2>
+  
+    <div class="entry-detail" id="new(__temp_33:JSON::PullParser)-class-method">
+      <div class="signature">
+        
+        def self.<strong>new</strong>(__temp_33 : JSON::PullParser)
+
+        <a class="method-permalink" href="#new%28__temp_33%3AJSON%3A%3APullParser%29-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+
+
+
+  <h2>Class Method Detail</h2>
+  
+    <div class="entry-detail" id="find(cep)-class-method">
+      <div class="signature">
+        
+        def self.<strong>find</strong>(cep)
+
+        <a class="method-permalink" href="#find%28cep%29-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/vnbrs/burocracia.cr/blob/28ceb5af5dfa6c2c50852a6e6261dc102d287260/src/burocracia/cep/address.cr#L26" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+  <h2>Instance Method Detail</h2>
+  
+    <div class="entry-detail" id="cep:String-instance-method">
+      <div class="signature">
+        
+        def <strong>cep</strong> : String
+
+        <a class="method-permalink" href="#cep%3AString-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="cep=(_cep:String)-instance-method">
+      <div class="signature">
+        
+        def <strong>cep=</strong>(_cep : String)
+
+        <a class="method-permalink" href="#cep%3D%28_cep%3AString%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="city:String-instance-method">
+      <div class="signature">
+        
+        def <strong>city</strong> : String
+
+        <a class="method-permalink" href="#city%3AString-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="city=(_city:String)-instance-method">
+      <div class="signature">
+        
+        def <strong>city=</strong>(_city : String)
+
+        <a class="method-permalink" href="#city%3D%28_city%3AString%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="neighborhood:String-instance-method">
+      <div class="signature">
+        
+        def <strong>neighborhood</strong> : String
+
+        <a class="method-permalink" href="#neighborhood%3AString-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="neighborhood=(_neighborhood:String)-instance-method">
+      <div class="signature">
+        
+        def <strong>neighborhood=</strong>(_neighborhood : String)
+
+        <a class="method-permalink" href="#neighborhood%3D%28_neighborhood%3AString%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="state:String-instance-method">
+      <div class="signature">
+        
+        def <strong>state</strong> : String
+
+        <a class="method-permalink" href="#state%3AString-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="state=(_state:String)-instance-method">
+      <div class="signature">
+        
+        def <strong>state=</strong>(_state : String)
+
+        <a class="method-permalink" href="#state%3D%28_state%3AString%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="street:String-instance-method">
+      <div class="signature">
+        
+        def <strong>street</strong> : String
+
+        <a class="method-permalink" href="#street%3AString-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="street=(_street:String)-instance-method">
+      <div class="signature">
+        
+        def <strong>street=</strong>(_street : String)
+
+        <a class="method-permalink" href="#street%3D%28_street%3AString%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="to_json(json:JSON::Builder)-instance-method">
+      <div class="signature">
+        
+        def <strong>to_json</strong>(json : JSON::Builder)
+
+        <a class="method-permalink" href="#to_json%28json%3AJSON%3A%3ABuilder%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+
+
+
+
+</div>
+
+</body>
+</html>
