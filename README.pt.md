@@ -28,6 +28,9 @@ Burocracia::CEP.generate
 Burocracia::CEP.generate(format: true)
 => "71946-192"
 
+Burocracia::CEP::Address.find "80210-130"
+=> #<CEP::Address:0x10e1b83c0 @cep="80210130", @neighborhood="Jardim Botânico", @city="Curitiba", @street="Rua José Ananias Mauad", @state="Paraná", @state_abbreviation="PR">
+
 Burocracia::CPF.valid?("10880423971")
 => false
 

@@ -1,5 +1,6 @@
 require "./sanitizer"
 require "./generator"
+require "./cep/*"
 
 module Burocracia
   # The CEP module offers methods to validate, generate and format Brazilian post codes.
