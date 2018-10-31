@@ -23,9 +23,9 @@ module Burocracia
         state: {key: "estado", type: String},
       )
 
-      def self.find(cep)
+      def self.find(cep, secure = true)
         sanitize cep
-        response = get cep
+        response = get(cep, secure)
         Address.from_json response
       end
     end
