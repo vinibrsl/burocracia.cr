@@ -4,7 +4,7 @@ describe Burocracia::CEP::Address do
   describe "#find" do
     context "when the cep exists" do
       it "returns an address" do
-        address = Burocracia::CEP::Address.find "80210130"
+        address = Burocracia::CEP::Address.find "80210130", secure: false
         address.nil?.should be_false
         address.street.blank?.should be_false
       end
